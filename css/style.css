@@ -92,6 +92,7 @@ main {
 /* Women in Audio Section */
 #women-in-audio {
     text-align: center;
+    margin-top: 30px;
 }
 
 /* Profile Cards - Updated Layout */
@@ -148,7 +149,7 @@ main {
 .profile .title {
     font-size: clamp(1.2rem, 4vw, 1.5rem); /* Scales from 1.2rem to 1.5rem depending on screen size */
     font-weight: bold;
-    margin-bottom: 10px; /* Space below title */
+    margin: 10px; /* Space below title */
 
     color: #003366;
 }
