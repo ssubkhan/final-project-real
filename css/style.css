@@ -389,6 +389,10 @@ footer p {
         background: linear-gradient(to bottom, #031264, #37307d); /* Dark gradient */
     }
 
+    .profile:focus {
+        background: linear-gradient(to bottom, #031264, #37307d); /* Dark gradient */
+    }
+
     .profile img {
         border: 10px solid #0b0034; /* Dark border */
     }
@@ -437,3 +441,85 @@ footer p {
     }
 }
 
+/* High Contrast MODE! */
+.high-contrast {
+    background-color: #000000; /* Black background */
+    color: #FFFF00; /* Bright yellow text */
+}
+
+.high-contrast header,
+.high-contrast nav ul li a,
+.high-contrast .intro p,
+.high-contrast .profile,
+.high-contrast footer,
+.high-contrast .lightbox,
+.high-contrast .lightbox-content {
+    background-color: #000000; /* Black background */
+    color: #FFFF00; /* Bright yellow text */
+}
+
+.high-contrast nav ul li a:hover,
+.high-contrast nav ul li a:focus {
+    background-color: #FFFF00; /* Yellow background on hover */
+    color: #000000; /* Black text on hover */
+}
+
+.high-contrast .profile:hover {
+    background: linear-gradient(to bottom, #000000, #4d5800); /* Black and yellow gradient */
+}
+
+.high-contrast .profile img {
+    border: 10px solid #ffee04; /* Dark border */
+}
+
+.high-contrast .profile:focus {
+    background: linear-gradient(to bottom, #031264, #37307d); /* Dark gradient */
+}
+
+.high-contrast .bio-button {
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+.high-contrast .close-btn {
+    color: #FFFF00; /* Bright yellow close button */
+}
+
+.high-contrast .close-btn:hover {
+    color: #FF0000; /* Red close button on hover */
+}
+
+/* Basic button styling */
+#high-contrast-toggle {
+    font-family: Helvetica, sans-serif; /* Use the same font for consistency */
+   margin:15px;
+   padding: 5px;
+    font-size: 1rem; /* Adjust font size */
+    color: #ffffff; /* White text */
+    background-color: #251b6a; /* Dark background */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+#high-contrast-toggle:hover {
+    background-color: #ffffff; /* Light background on hover */
+    color: #333333; /* Dark text on hover */
+    border-color: #333333; /* Dark border on hover */
+}
+
+/* Active state (when the button is clicked) */
+#high-contrast-toggle:active {
+    background-color: #e5ff00; /* on click */
+    color: #000000; /* Black text when clicked */
+    border-color: #ff9900; /* Orange border when clicked */
+}
+
+/* Larger button for better visibility in high contrast mode */
+.high-contrast #high-contrast-toggle {
+    font-size: 1.2rem; /* Larger text for high contrast mode */
+    padding: 12px 24px; /* Larger padding for the button */
+    border-radius: 8px; /* Slightly larger rounded corners */
+}

@@ -123,4 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onresize = checkProfileSize;
 });
 
+// Function to toggle high contrast mode
+function toggleHighContrast() {
+    const body = document.body;
+    const toggleButton = document.getElementById('high-contrast-toggle');
+
+    // Toggle the 'high-contrast' class on the body element
+    body.classList.toggle('high-contrast');
+
+    // Change button text based on the mode
+    if (body.classList.contains('high-contrast')) {
+        toggleButton.textContent = 'Disable High Contrast Mode';
+    } else {
+        toggleButton.textContent = 'Enable High Contrast Mode';
+    }
+}
 
