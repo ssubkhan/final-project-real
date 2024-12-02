@@ -1,0 +1,188 @@
+/* Global Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #cbdafa; /* Light blue background */
+    color: #080340; /* Dark blue text */
+    padding: 20px;
+    line-height: 1.5;
+    text-align: center; /* Centered text for the whole page */
+}
+
+html {
+    font-size: 15px; /* Base font size */
+}
+
+/* Header Styles */
+header {
+    background-image: url('/images/console3.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-color: #003366; /* Navy blue background */
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ffffff; /* White border for contrast */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    
+    border-radius: 15px; /* Adjust the value to make the corners as rounded as you like */
+}
+
+
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Scales from 1.5rem to 2.5rem depending on screen size */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Scales from 1rem to 1.5rem depending on screen size */
+    transition: color 1s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffffff; /* white on hover/focus */
+}
+
+/* Main Section Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Women in Audio Section */
+#women-in-audio {
+    text-align: center;
+}
+
+/* Profile Cards - Updated Layout */
+.profiles {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px; /* Space between the cards */
+    margin-top: 20px;
+    justify-content: flex-start; /* Start the content at the top */
+}
+
+/* Profile Card */
+.profile {
+    display: flex;
+    flex-direction: row; /* Horizontally align the profile picture and bio */
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    transition: background-color 0.5s ease, transform 1s ease; /* Smoother transition for both background-color and transform */
+    margin-bottom: 20px;
+    max-width: 100%;
+    justify-content: space-between;
+    outline: none; /* Remove default outline */
+    cursor: pointer; /* Indicates clickable */
+}
+
+/* Profile Card Hover Effect */
+.profile:hover {
+    background: linear-gradient(to bottom, #e4f1fd, #eff2ff); /* Gradient effect */
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Profile Image */
+.profile img {
+    width: 100%;
+    max-width: 150px; /* Limit image size */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px; /* Space between the image and bio text */
+    border: 10px solid #003366;
+}
+
+/* Profile Title */
+.profile .title {
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Scales from 1.2rem to 1.5rem depending on screen size */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below title */
+    color: #003366;
+}
+
+/* Bio Section */
+.profile .bio {
+    flex: 1; /* Allow bio to grow horizontally */
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+    color: #003366;
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Scales from 0.9rem to 1rem depending on screen size */
+    text-align: left; /* Align text to the left */
+}
+
+/* Footer Styles */
+footer {
+    background-image: url('/images/console3.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+
+    text-align: center;
+    margin-top: 40px;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+
+    border: 2px solid #ffffff; /* White border for contrast */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    
+    border-radius: 15px; /* Adjust the value to make the corners as rounded as you like */
+}
+
+footer p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem); /* Scales from 0.8rem to 0.9rem depending on screen size */
+}
+
+/* Focused Elements */
+:focus {
+    outline: 4px solid #ffffff; /* Make the border slightly thicker */
+    outline-offset: 7px; /* Add space between the outline and the element */
+    border-radius: 10px; /* Make the focus border rounded */
+}
+
+
+
+/* Accessibility Styles */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important; /* Disable animations for users with reduced motion preference */
+    }
+}
+
+/* Make profile cards focusable by keyboard and screen reader friendly */
+.profile[tabindex="0"]:focus {
+    outline: 3px solid #2b00ff; /* blue focus outline */
+    background-color: #e4f1fd; /* light background on focus */
+    transform: translateY(-5px); /* slight lift */
+}
+
+/* Profile Card Hover and Focus Effects for Accessibility */
+.profile:focus img {
+    border-color: #0800ff; /* Change image border on focus for clarity */
+}
+
