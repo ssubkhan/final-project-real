@@ -14,7 +14,7 @@ html {
 
 /* Header Styles */
 header {
-    background-image: url('images/console3.png');
+    background-image: url('/final-project-real/images/console3.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
