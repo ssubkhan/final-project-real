@@ -23,7 +23,7 @@
     <main>
 
         <section id="women-in-audio">
-            <h2>Celebrating Women Working In Sound</h2>
+            <h2>Celebrating Women Working In The Audio World!</h2>
             <p>The importance..</p>
 
 
@@ -227,10 +227,13 @@
     </div>
 
 <!-- Lightbox for displaying bio -->
-<div id="bioLightbox" class="lightbox">
+<div id="bioLightbox" class="lightbox" role="dialog" aria-labelledby="lightboxTitle" aria-hidden="true">
     <div class="lightbox-content">
-        <span id="closeBioLightbox" class="close-btn">&times;</span> <!-- Close button -->
-        <div id="lightboxBioContent"></div> <!-- Bio will be injected here by JavaScript -->
+        <span id="closeBioLightbox" class="close-btn" role="button" tabindex="0" aria-label="Close">&times;</span>
+        <div id="lightboxBioContent" tabindex="-1">
+            <h2 id="lightboxTitle">Bio</h2>
+            <!-- Content will go here -->
+        </div>
     </div>
 </div>
 

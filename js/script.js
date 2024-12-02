@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgSrc = imageLink.querySelector('img').src; // Get the source of the clicked image
             lightboxImage.src = imgSrc; // Update the lightbox image source
             lightbox.style.display = 'block'; // Show the lightbox
+            lightbox.setAttribute('aria-hidden', 'false');
+            lightboxImage.focus(); // Focus on the lightbox image for accessibility
         });
     });
 
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             btn.closest('.lightbox').style.display = 'none'; // Hide the parent lightbox
+            btn.closest('.lightbox').setAttribute('aria-hidden', 'true');
         });
     });
 
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bioButtons = document.querySelectorAll('.bio-button'); // Select all bio buttons
     const bioLightbox = document.getElementById('bioLightbox'); // Bio lightbox container
     const lightboxBioContent = document.getElementById('lightboxBioContent'); // Content area in bio lightbox
+    const closeBioLightboxButton = document.getElementById('closeBioLightbox'); // Close button for bio lightbox
 
     // Open bio lightbox when a bio button is clicked
     bioButtons.forEach(button => {
@@ -34,13 +38,63 @@ document.addEventListener('DOMContentLoaded', () => {
             const bioContent = document.getElementById(bioId).innerHTML; // Fetch the bio content
             lightboxBioContent.innerHTML = bioContent; // Inject bio content into the lightbox
             bioLightbox.style.display = 'block'; // Show the bio lightbox
+            bioLightbox.setAttribute('aria-hidden', 'false');
+            closeBioLightboxButton.focus(); // Focus on the close button for accessibility
         });
     });
 
     // Close the bio lightbox when clicking outside the content or on the close button
     bioLightbox.addEventListener('click', (event) => {
-        if (event.target === bioLightbox || event.target === document.getElementById('closeBioLightbox')) {
+        if (event.target === bioLightbox || event.target === closeBioLightboxButton) {
             bioLightbox.style.display = 'none'; // Hide the bio lightbox
+            bioLightbox.setAttribute('aria-hidden', 'true');
+        }
+    });
+
+    // Handle keyboard navigation for the lightbox // use escape key to hop out
+    function handleKeydown(event, lightboxElement) {
+        if (event.key === 'Escape') {
+            lightboxElement.style.display = 'none'; // Hide the lightbox
+            lightboxElement.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (lightbox.style.display === 'block') {
+            handleKeydown(event, lightbox);
+        } else if (bioLightbox.style.display === 'block') {
+            handleKeydown(event, bioLightbox);
+        }
+    });
+
+    // Trap focus inside the lightbox
+    function trapFocus(event, lightboxElement) {
+        const focusableElements = lightboxElement.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+        const firstFocusableElement = focusableElements[0];
+        const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+        if (event.key === 'Tab') {
+            if (event.shiftKey) {
+                // Shift+Tab: If on the first element, cycle to the last element
+                if (document.activeElement === firstFocusableElement) {
+                    event.preventDefault();
+                    lastFocusableElement.focus();
+                }
+            } else {
+                // Tab: If on the last element, cycle to the first element
+                if (document.activeElement === lastFocusableElement) {
+                    event.preventDefault();
+                    firstFocusableElement.focus();
+                }
+            }
+        }
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (lightbox.style.display === 'block') {
+            trapFocus(event, lightbox);
+        } else if (bioLightbox.style.display === 'block') {
+            trapFocus(event, bioLightbox);
         }
     });
 
