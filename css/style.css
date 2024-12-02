@@ -115,7 +115,7 @@ main {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    margin-right: 20px; /* Space between the image and bio text */
+    margin: 10px;
     border: 10px solid #003366;
 }
 
@@ -124,6 +124,7 @@ main {
     font-size: clamp(1.2rem, 4vw, 1.5rem); /* Scales from 1.2rem to 1.5rem depending on screen size */
     font-weight: bold;
     margin-bottom: 10px; /* Space below title */
+
     color: #003366;
 }
 
