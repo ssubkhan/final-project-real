@@ -30,7 +30,7 @@ header {
 
 
 header h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Scales from 1.5rem to 2.5rem depending on screen size */
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Scales from 1.5rem to 2.5rem depending on screen size */
 }
 
 /* Navigation Styles */
@@ -63,6 +63,31 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+
+/* intro */
+.intro {
+    margin: 20px auto;          /* Center it horizontally with some space above and below */
+    padding: 20px;              /* Add some padding inside the container */
+    line-height: 1.5;           /* better readability */
+    
+}
+
+/* Style the paragraph text inside .intro */
+.intro p {
+    font-size: clamp;            /* responsive*/
+    color: #030033;                /* Dark text color for good contrast */
+    text-align: justify;        /* Justify the text for a neat look */
+    margin: 0;                  /* Remove default margins */
+}
+
+
+
+/* Focused state for accessibility */
+.intro:focus {
+    outline: 3px solid #2a6496; /* Add a visible outline when the container is focused */
+}
+
+
 
 /* Women in Audio Section */
 #women-in-audio {

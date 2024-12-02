@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bioButton = profile.querySelector('.bio-button');
             const bio = profile.querySelector('.bio');
 
-            const maxProfileWidth = 600; // Maximum width threshold
+            const maxProfileWidth = 900; // Maximum width threshold
 
             if (profile.offsetWidth < maxProfileWidth) {
                 bio.style.display = "none"; // Hide bio content
