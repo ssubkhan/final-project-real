@@ -1,12 +1,16 @@
 /* Global Styles */
 body {
     font-family: Helvetica, sans-serif;
-    background-color: #cbdafa; /* Light blue background */
+    background-color: #efeae6; /* Light blue background */
     color: #080340; /* Dark blue text */
     padding: 20px;
     line-height: 1.5;
     text-align: center; /* Centered text for the whole page */
+
+    
 }
+
+
 
 html {
     font-size: 15px; /* Base font size */

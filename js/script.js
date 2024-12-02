@@ -122,3 +122,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onload = checkProfileSize;
     window.onresize = checkProfileSize;
 });
+
+
