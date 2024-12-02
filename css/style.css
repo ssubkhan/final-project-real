@@ -30,7 +30,10 @@ header {
 
 
 header h1 {
-    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Scales from 1.5rem to 2.5rem depending on screen size */
+    font-size: 30px;
+    background-color: rgba(8, 3, 64, 0.8);
+    padding: 7px;
+    border-radius: 20px;
 }
 
 /* Navigation Styles */
@@ -48,6 +51,10 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    background-color: rgba(8, 3, 64, 0.8);
+
+    padding: 7px;
+    border-radius: 20px;
     font-size: clamp(1rem, 3vw, 1.5rem); /* Scales from 1rem to 1.5rem depending on screen size */
     transition: color 1s;
 }
@@ -76,7 +83,6 @@ main {
 .intro p {
     font-size: clamp;            /* responsive*/
     color: #030033;                /* Dark text color for good contrast */
-    text-align: justify;        /* Justify the text for a neat look */
     margin: 0;                  /* Remove default margins */
 }
 
