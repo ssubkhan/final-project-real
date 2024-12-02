@@ -223,11 +223,12 @@ footer p {
     max-height: 90%;
     border-radius: 8px;
     outline: 3px solid #ffffff; /* white  outline */
-
+    margin: 0 auto;
 }
 
 .lightbox:target {
     display: flex;
+       justify-content: center;
 }
 
 .lightbox-content {
@@ -242,13 +243,21 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Close button styles */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 30px;
-    color: rgb(19, 0, 125);
+    font-size: 24px;
     cursor: pointer;
+    color: #bdb4ff;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.close-btn:hover {
+    color: #f00; 
 }
 
 #viewBioBtn {
@@ -276,4 +285,5 @@ footer p {
     align-items: center;
     justify-content: center;
     z-index: 1000; /* Ensures it appears above other elements */
+    margin: 0 auto;
 }
