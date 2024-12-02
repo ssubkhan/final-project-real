@@ -74,9 +74,10 @@ main {
 .profiles {
     display: flex;
     flex-direction: column; /* Stack the cards vertically */
+    flex-wrap: wrap; /* for smaller screens  */
     gap: 20px; /* Space between the cards */
     margin-top: 20px;
-    justify-content: flex-start; /* Start the content at the top */
+    justify-content: center; /* Start the content at the top */
 }
 
 /* Profile Card */
@@ -95,6 +96,11 @@ main {
     justify-content: space-between;
     outline: none; /* Remove default outline */
     cursor: pointer; /* Indicates clickable */
+    max-height: 400px; /* Set max height for profile cards */
+    overflow: hidden; /* Hide excess content if card height is too large */
+    flex-grow: 1; /* Allows cards to grow and fill space */
+    flex-shrink: 1; /* Allows cards to shrink when space is limited */
+    flex-basis: 30%; /* Default size of each card */
 }
 
 /* Profile Card Hover Effect */
@@ -106,7 +112,7 @@ main {
 /* Profile Image */
 .profile img {
     width: 100%;
-    max-width: 150px; /* Limit image size */
+    max-width: clamp(100px, 20vw, 150px); /* Image adjusts based on screen */
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -131,7 +137,19 @@ main {
     margin-left: 15px;
     color: #003366;
     font-size: clamp(0.9rem, 3vw, 1rem); /* Scales from 0.9rem to 1rem depending on screen size */
-    text-align: left; /* Align text to the left */
+    overflow: scroll;
+}
+
+/* Style for the button */
+.bio-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.bio-button:hover {
+    background-color: #0056b3;
 }
 
 /* Footer Styles */
@@ -160,8 +178,7 @@ footer p {
 
 /* Focused Elements */
 :focus {
-    outline: 4px solid #ffffff; /* Make the border slightly thicker */
-    outline-offset: 7px; /* Add space between the outline and the element */
+    outline: 4px solid #4c15ff; /* Make the border slightly thicker */
     border-radius: 10px; /* Make the focus border rounded */
 }
 
@@ -174,7 +191,7 @@ footer p {
     }
 }
 
-/* Make profile cards focusable by keyboard and screen reader friendly */
+/* screen reader friendly */
 .profile[tabindex="0"]:focus {
     outline: 3px solid #2b00ff; /* blue focus outline */
     background-color: #e4f1fd; /* light background on focus */
@@ -186,3 +203,64 @@ footer p {
     border-color: #0800ff; /* Change image border on focus for clarity */
 }
 
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 0, 80, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    outline: 3px solid #ffffff; /* white  outline */
+
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+#viewBioBtn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4531c5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#viewBioBtn:hover {
+    background-color: #0056b3;
+}

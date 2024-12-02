@@ -29,33 +29,61 @@
 
             <div class="profiles">
                 
-                <article class="profile" tabindex="0">
-                    <img src="images/teng_chen.jpg" alt="Photograph of Teng Chen">
+                <article class="profile" tabindex="0" id="profile1">
+                    <a href="#lightbox1">
+                        <img src="images/teng_chen.jpg" alt="Photograph of Teng Chen">
+                    </a>
                     <h3>Teng Chen</h3>
-                    <div class="bio">
+                    <!-- View Bio button now opens the lightbox -->
+                    <button class="bio-button" data-bio="bio1"">View Bio</button>
+                
+                    <!-- Bio content that will appear in the lightbox -->
+                    <div id="bio1" class="bio" style="display:none;" tabindex="0">
                         <p>Born and raised in Beijing, Teng moved to the U.S. to pursue her passion, earning three degrees in music and recording at the prestigious Peabody Institute of Johns Hopkins University. Starting as a classical pianist, her love for sound engineering blossomed from self-recording at home to working with world-renowned orchestras like the Baltimore Symphony and Boston Symphony at Tanglewood. Now part of the audio team at Saturday Night Live, Teng shares her journey of courage, breaking barriers, and amplifying women’s voices in audio engineering.</p>
                     </div>
                 </article>
 
-                <article class="profile" tabindex="0">
-                    <img src="images/oram.jpg" alt="Photograph of Daphne Oram">
+                <article class="profile" tabindex="0" id="profile2">
+                    <a href="#lightbox2">
+                        <img src="images/oram.jpg" alt="Photograph of Daphne Oram">
+                    </a>
                     <h3>Daphne Oram</h3>
-                    <div class="bio">
-                    <p>Daphne Oram (1925–2003) was a British composer, electronic music innovator, and one of the first women to forge a career in the field of sound engineering. She is best known for co-founding the BBC Radiophonic Workshop in 1958, where she helped develop early electronic music and sound effects. Oram's experimental approach to sound led her to create the Oramics technique, a groundbreaking method of composing with sound that involved drawing waveforms on film. Throughout her career, Oram combined her interest in technology with her artistic vision, making a significant impact on the development of electronic music and sound design. Her contributions remain influential in the fields of music technology and experimental composition.</p>
+                    
+                    <!-- View Bio button now opens the lightbox -->
+                    <button class="bio-button" data-bio="bio2">View Bio</button>
+                    
+                    <!-- Bio content that will appear in the lightbox -->
+                    <div id="bio2" class="bio" style="display:none;" tabindex="0">
+                        <p>Daphne Oram (1925–2003) was a British composer, electronic music innovator, and one of the first women to forge a career in the field of sound engineering. She is best known for co-founding the BBC Radiophonic Workshop in 1958, where she helped develop early electronic music and sound effects. Oram's experimental approach to sound led her to create the Oramics technique, a groundbreaking method of composing with sound that involved drawing waveforms on film. Throughout her career, Oram combined her interest in technology with her artistic vision, making a significant impact on the development of electronic music and sound design. Her contributions remain influential in the fields of music technology and experimental composition.</p>
+                    </div>
                 </article>
+                
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox3">
                     <img src="images/mazurek.jpg" alt="Photograph of Mary Mazurek">
+                </a>
                     <h3>Mary Mazurek</h3>
-                    <div class="bio">
+
+                    <!-- View Bio button now opens the lightbox -->
+                    <button class="bio-button" data-bio="bio3">View Bio</button>
+                    
+                    <!-- Bio content that will appear in the lightbox -->
+                    <div id="bio3" class="bio" style="display:none;" tabindex="0">
                         <p>Mary Mazurek is a GRAMMY-nominated recording engineer celebrated for her exceptional work on *Liquid Melancholy: Clarinet Music of James Stephenson*, which earned her a nomination at the 61st Annual GRAMMY Awards for Best Engineered Album, Classical. With a career spanning thousands of sessions, her credits include icons like Yo-Yo Ma, Kronos Quartet, and the Chicago Symphony Orchestra. A dedicated advocate for women in the recording industry—where women represent less than 5%—Mary serves as Diversity, Equity, and Inclusion Chairperson for the Audio Engineering Society. An accomplished educator and sought-after speaker, her work inspires the next generation of audio professionals.</p>
                     </div>
                 </article>
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox4">
                     <img src="images/galindo.avif" alt="Photograph of Jett Galindo">
+                </a>
                     <h3>Jett Galindo</h3>
-                    <div class="bio">
+                    <!-- View Bio button now opens the lightbox -->
+                    <button class="bio-button" data-bio="bio4">View Bio</button>
+                    
+                    <!-- Bio content that will appear in the lightbox -->
+                    <div id="bio4" class="bio" style="display:none;" tabindex="0">
                         <p>Jett Galindo is a Grammy-winning Filipino mastering engineer and vinyl cutter based in Los Angeles. She has collaborated with an array of artists, including Elvis Costello, Billie Eilish, and Pinar Toprak, while carrying forward the legacy of her mentor, mastering icon Doug Sax of The Mastering Lab. A former member of The Bakery, Jett worked alongside industry leaders Eric Boulanger and Peter Hewitt-Dutton before launching her own studio.
 
                         An advocate for education and diversity in audio, Jett serves as a Governor on the Recording Academy's LA Chapter Board and as a member of the P&E Wing Advisory Council. She is also a board member of Women in Vinyl and an active participant in SoundGirls, promoting representation in the industry. Additionally, Jett has shared her expertise through over 30 articles on mastering for iZotope's LEARN portal.</p>
@@ -63,16 +91,29 @@
                 </article>
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox5">
                     <img src="images/shoemaker.jpg" alt="Photograph of Trina Shoemaker">
-                    <h3>Trina Shoemaker</h3>
-                    <div class="bio">
+                    
+                </a>
+                <h3>Trina Shoemaker</h3>
+                     <!-- View Bio button now opens the lightbox -->
+                     <button class="bio-button" data-bio="bio5">View Bio</button>
+                    
+                     <!-- Bio content that will appear in the lightbox -->
+                     <div id="bio5" class="bio" style="display:none;" tabindex="0">
                     <p>Trina Shoemaker is a Grammy-winning sound engineer and producer known for her exceptional work in the music industry. With a career spanning over two decades, Shoemaker has worked on a wide array of iconic albums across genres, from rock to country. She became the first woman to win a Grammy Award for Best Engineered Album, Non-Classical for Sheryl Crow's The Globe Sessions. Shoemaker's meticulous approach and her ability to capture the perfect sound has earned her respect from both artists and peers alike. Her credits include working with artists such as Queens of the Stone Age, Emmylou Harris, and Iggy Pop. She is celebrated for her technical expertise, creative vision, and commitment to bringing out the best in every project she works on.</p>
                 </article>
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox6">
                     <img src="images/balston.jpg" alt="Photograph of Cicely Balston">
+                </a>
                     <h3>Cicely Balston</h3>
-                    <div class="bio">
+                     <!-- View Bio button now opens the lightbox -->
+                     <button class="bio-button" data-bio="bio6">View Bio</button>
+                    
+                     <!-- Bio content that will appear in the lightbox -->
+                     <div id="bio6" class="bio" style="display:none;" tabindex="0">
                         <p>Cicely Balston has established herself as one of London’s premier mastering engineers since 2013, working across diverse genres and formats, including digital and vinyl. A winner of the Music Producers Guild’s Mastering Engineer of the Year award, she has also been twice shortlisted for this prestigious honor.
 
                         Cicely began her career at Gearbox Records before joining AIR Studios in 2016, where she contributed to remasters of David Bowie’s catalog, worked with saxophonist Nubya Garcia, and mastered Ludovico Einaudi’s Seven Days Walking series. Her vinyl mastering credits include Eric B. & Rakim, Usher, Simply Red, and Porcupine Tree’s Closure/Continuation. In addition, she has mastered soundtracks for notable film and TV projects such as Harry Escott’s BAFTA-winning Roadkill, Self Esteem’s score for Prima Facie, and Roger Goula’s All That Breathes, winner of best documentary at Sundance and Cannes.
@@ -82,16 +123,28 @@
                 </article>
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox7">
                     <img src="images/torres.jpg" alt="Photograph of Simone Torres">
+                    </a>
                     <h3>Simone Torres</h3>
-                    <div class="bio">
+                     <!-- View Bio button now opens the lightbox -->
+                     <button class="bio-button" data-bio="bio7">View Bio</button>
+                    
+                     <!-- Bio content that will appear in the lightbox -->
+                     <div id="bio7" class="bio" style="display:none;" tabindex="0">
                     <p>The Grammy-nominated engineer and vocal producer, renowned for her work with artists like Cardi B and Camila Cabello, has built an impressive reputation in the music industry. She was most recently credited on Ariana Grande, Nicki Minaj, and Normani’s track “Bad to You” from the Grande-produced *Charlie's Angels* soundtrack, where she worked on Normani’s vocals. “The engineer’s role is to bridge the gap between the technical and creative aspects,” says the 26-year-old, based in Atlanta. A graduate of Berklee College of Music, she is celebrated for her expert touch in vocal production, particularly when working directly with artists. “Trust between a vocalist and their vocal producer is crucial,” she emphasizes.</p>
                 </article>
 
                 <article class="profile" tabindex="0">
+                    <a href="#lightbox8">
                     <img src="images/kadry.jpg" alt="Photograph of Heba Kadry">
+                    </a>
                     <h3>Heba Kadry</h3>
-                    <div class="bio">
+                     <!-- View Bio button now opens the lightbox -->
+                     <button class="bio-button" data-bio="bio8">View Bio</button>
+                    
+                     <!-- Bio content that will appear in the lightbox -->
+                     <div id="bio8" class="bio" style="display:none;" tabindex="0">
                         <p>Heba Kadry is an acclaimed mastering and mixing engineer with a global career that bridges genres and generations of music. Born in Egypt and inspired by early '90s shoegaze, Heba’s journey in audio began after graduating from The American University in Cairo. She honed her skills at J. Walter Thompson in Cairo before moving to the U.S. to study audio engineering at The Recording Workshop in Ohio.
 
                         Her early career saw her as a recording engineer and studio manager at SugarHill Recording Studios in Houston, Texas, before transitioning to mastering in New York. Since 2013, Heba has been based in Brooklyn, working with iconic artists such as Björk, Bon Iver, Beach House, Slowdive, The Mars Volta, Lucy Dacus, Big Thief, Animal Collective, Hayley Williams, and many others.
@@ -104,9 +157,15 @@
          
 
             <article class="profile" tabindex="0">
+                <a href="#lightbox9">
                 <img src="images/tan.jpeg" alt="Placeholder for Woman 4">
+                </a>
                 <h3>Yang Tan</h3>
-                <div class="bio">
+                 <!-- View Bio button now opens the lightbox -->
+                 <button class="bio-button" data-bio="bio9">View Bio</button>
+                    
+                 <!-- Bio content that will appear in the lightbox -->
+                 <div id="bio9" class="bio" style="display:none;" tabindex="0">
                 <p>Yang Tan is an accomplished sound engineer and producer renowned for his skill in blending technical precision with a deep understanding of the creative process. Based in New York City, Tan has worked on a variety of high-profile projects, with notable credits including work with prominent artists in both the music and film industries. Known for his ability to adapt to diverse genres, his sound engineering expertise has earned him a reputation for excellence in both live sound and studio recording. With a keen ear for detail and a collaborative approach, Tan is dedicated to making sure every project achieves its full sonic potential. His career highlights include contributions to major motion pictures, live shows, and album productions for various top-tier musicians.</p>
             </article>
 
@@ -122,6 +181,60 @@
         <p>SI339 Final Individual Project</p>
     </footer>
 
+      <div id="lightbox1" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/teng_chen.jpg" alt="Teng Chen">
+    </div>
+
+    <div id="lightbox2" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/oram.jpg" alt="Daphne Oram">
+    </div>
+
+    <div id="lightbox3" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/mazurek.jpg" alt="Mary Mazurek">
+    </div>
+
+    <div id="lightbox4" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/galindo.avif" alt="Jett Galindo">
+    </div>
+
+    <div id="lightbox5" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/shoemaker.jpg" alt="Trina Shoemaker">
+    </div>
+
+    <div id="lightbox6" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/balston.jpg" alt="Cicely Balston">
+    </div>
+
+    <div id="lightbox7" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/torres.jpg" alt="Simone Torres">
+    </div>
+
+    <div id="lightbox8" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/kadry.jpg" alt="Heba Kadry">
+    </div>
+
+    <div id="lightbox9" class="lightbox">
+        <span class="close-btn"><a href="#">&times;</a></span>
+        <img src="images/tan.jpeg" alt="Yang Tan">
+    </div>
+
+<!-- Lightbox for displaying bio -->
+<div id="bioLightbox" class="lightbox">
+    <div class="lightbox-content">
+        <span id="closeBioLightbox" class="close-btn">&times;</span> <!-- Close button -->
+        <div id="lightboxBioContent"></div> <!-- Bio will be injected here by JavaScript -->
+    </div>
+</div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
+
